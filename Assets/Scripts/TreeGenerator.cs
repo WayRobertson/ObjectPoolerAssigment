@@ -5,6 +5,7 @@ using UnityEngine;
 public class TreeGenerator : MonoBehaviour
 {
     public GameObject treelimb;
+    public GameObject treeprefab;
 
     void Start()
     {
@@ -52,7 +53,7 @@ public class TreeGenerator : MonoBehaviour
 
     public void MakeBranch()
     {
-        Instantiate(treelimb, transform.position + Random.onUnitSphere + new Vector3(0, 1, 0), Quaternion.identity, transform);
+      Instantiate(treelimb, transform.position + Random.onUnitSphere + new Vector3(0, 1, 0), Quaternion.identity, transform);
     }
 
 
