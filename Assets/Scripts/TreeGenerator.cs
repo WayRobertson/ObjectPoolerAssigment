@@ -24,7 +24,7 @@ public class TreeGenerator : MonoBehaviour
     }
     IEnumerator CreateTree()
     {
-        //Note on delayed generation of branches: After some time passes (inbetween the last line of code and this one) create a new branch.
+        //Note on delayed generation of branches: After some time passes (inbetween the last line of code and this one) it will create a new branch.
         //Note(1): Creates three initial branches if the gameobject does not have a parent. The first three can be considered the trunk of the tree.
         if (transform.parent == null)
         {
@@ -65,11 +65,9 @@ public class TreeGenerator : MonoBehaviour
         }
     }
 
-
-
     public void MakeBranch()
     {
-      //Creates an individual branch which creates children branches that break off from it and then break off from its own branch (and so on) untill it looks like a tree. 
+      //Creates an individual branch which creates children branches that break off from it and then those children branches break off from themsleves (and so on) untill it looks like a tree. 
       Instantiate(treelimb, transform.position + Random.onUnitSphere + new Vector3(0, 1, 0), Quaternion.identity, transform);
     }
 
