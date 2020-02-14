@@ -5,7 +5,7 @@ using UnityEngine;
 public class DrawTree : MonoBehaviour
 {
     LineRenderer lineRenderer;
-    void Awake()
+    void OnEnable()
     {
         lineRenderer = GetComponent<LineRenderer>();
 

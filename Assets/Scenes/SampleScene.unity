@@ -266,9 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   treePrefab: {fileID: 5575851650764064335, guid: 0311a31b24376e344b91d9c9bf1f4eaa,
     type: 3}
-  listcomponent: {fileID: 0}
-  initialTreepool: 0
-  treePool: []
+  initialTreepool: 9
 --- !u!212 &1992845293
 SpriteRenderer:
   m_ObjectHideFlags: 0
