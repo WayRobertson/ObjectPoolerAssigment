@@ -5,7 +5,6 @@ using UnityEngine;
 #region RequiredComponents
 [RequireComponent(typeof(TreeGenerator))]
 [RequireComponent(typeof(DrawTree))]
-[RequireComponent(typeof(GameObject))]
 #endregion
 public class MakeTreeonClick : MonoBehaviour
 {
@@ -50,9 +49,17 @@ public class MakeTreeonClick : MonoBehaviour
                 return treePool[i];
             }
         }
-        //Note: Adds another tree to the object pooler if it exceeds original its limit. 
+        //Note: Adds another tree to the object pooler if it exceeds its original limit. 
         GameObject treeElement = Instantiate(treePrefab, pos, Quaternion.identity);
         treePool.Add(treeElement);
         return null;
+    }
+
+    void ErrorChecks()
+    {
+        if (treePrefab == null)
+        {
+            Debug.LogError("Attach TreePrefab");
+        }
     }
 }
